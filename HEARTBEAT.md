@@ -1,17 +1,27 @@
-# HEARTBEAT.md
+# HEARTBEAT.md — Lightweight Periodic Checks
+# Kept minimal. Heavy work offloaded to nightly cron.
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
-
-# Add tasks below when you want the agent to check something periodically.
-
-## Memory Maintenance (run every few days)
-- Check memory/ directory exists
-- Review daily memory files (memory/YYYY-MM-DD.md)
+## Memory Maintenance (run every few days — not every heartbeat)
+- Review recent daily notes in memory/
 - Update MEMORY.md with important learnings
-- Clean up old/outdated memory entries
+- Prune anything outdated
 
-## Codex Project Monitoring (run every few hours)
-- Check codex-projects/sessions/ for running jobs
-- Check /Users/davidsassistant/.openclaw/workspace/projects/ for active projects (look for TODO.md, PROMPT.md)
-- Review daily note for open Codex projects
-- Report completion status back to user
+## Servers / Quick Sanity Check (run once or twice daily)
+- Check all servers are still up (lsof ports: 5174, 5175, 6905, 3099, 9100, 9103, 9000)
+- Log any down servers to today's daily note
+
+## Task Counter — Auto-Compaction Trigger
+Every 10 user prompts, automatically:
+1. Write a work summary to `knowledge/daily/YYYY-MM-DD.md`
+2. Commit recent changes to git (in the project dir)
+3. Scan for and remove any `.bak` or old `*.json~` files in the workspace
+4. Post a brief notification to the chat
+
+Count: currently at 0 (reset after each compaction)
+
+## New Session Checklist (post-compaction)
+After each session:
+- [ ] Git commit in project dir
+- [ ] Clean up any .bak / json~ files
+- [ ] Note any pending issues in today's daily note
+- [ ] Reset counter to 0

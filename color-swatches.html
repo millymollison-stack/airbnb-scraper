@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Color Swatches</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { background: #111; color: #fff; font-family: system-ui, sans-serif; padding: 40px; margin: 0; }
+    h1 { font-size: 1.5rem; margin-bottom: 8px; }
+    p { color: #888; font-size: 0.85rem; margin-bottom: 30px; }
+    .section { margin-bottom: 40px; }
+    .section-title { font-size: 0.8rem; color: #555; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; border-bottom: 1px solid #222; padding-bottom: 6px; }
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0 0 10px 0;
+      padding: 10px 14px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .swatch.selected { border-color: #fff; }
+    .swatch-color { width: 50px; height: 50px; border-radius: 8px; flex-shrink: 0; cursor: pointer; }
+    .swatch-info { flex: 1; }
+    .swatch-name { font-size: 0.9rem; font-weight: 600; margin-bottom: 2px; }
+    .swatch-hex { font-size: 0.7rem; color: #888; font-family: monospace; }
+    .swatch input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; accent-color: #38B000; }
+    .selected-count { margin: 24px 0 16px; font-size: 0.9rem; color: #aaa; }
+    .actions { margin-top: 20px; }
+    .actions button {
+      background: #38B000; color: white; border: none;
+      padding: 12px 28px; border-radius: 8px; font-size: 1rem;
+      cursor: pointer; margin-right: 12px;
+    }
+    .actions button:hover { background: #2d8c00; }
+    .result { margin-top: 16px; padding: 16px; background: #1a1a1a; border-radius: 8px; font-family: monospace; font-size: 0.85rem; color: #aaa; white-space: pre-wrap; display: none; }
+  </style>
+</head>
+<body>
+  <h1>Brand Color Swatches</h1>
+  <p>Check the colors you want to save, then click "Copy Selected"</p>
+
+  <div class="section">
+    <div class="section-title">Distinctive Standalone Colors</div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#E63946">
+      <div class="swatch-color" style="background:#E63946"></div>
+      <div class="swatch-info"><div class="swatch-name">Strong Red</div><div class="swatch-hex">#E63946</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#F77F00">
+      <div class="swatch-color" style="background:#F77F00"></div>
+      <div class="swatch-info"><div class="swatch-name">Bright Orange</div><div class="swatch-hex">#F77F00</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FFC300">
+      <div class="swatch-color" style="background:#FFC300"></div>
+      <div class="swatch-info"><div class="swatch-name">Signal Yellow</div><div class="swatch-hex">#FFC300</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#38B000">
+      <div class="swatch-color" style="background:#38B000"></div>
+      <div class="swatch-info"><div class="swatch-name">Vivid Green</div><div class="swatch-hex">#38B000</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#0096C7">
+      <div class="swatch-color" style="background:#0096C7"></div>
+      <div class="swatch-info"><div class="swatch-name">Ocean Blue</div><div class="swatch-hex">#0096C7</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#7B2D8E">
+      <div class="swatch-color" style="background:#7B2D8E"></div>
+      <div class="swatch-info"><div class="swatch-name">Royal Purple</div><div class="swatch-hex">#7B2D8E</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#8B4513">
+      <div class="swatch-color" style="background:#8B4513"></div>
+      <div class="swatch-info"><div class="swatch-name">Saddle Brown</div><div class="swatch-hex">#8B4513</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#1A1A2E">
+      <div class="swatch-color" style="background:#1A1A2E; border: 1px solid #333;"></div>
+      <div class="swatch-info"><div class="swatch-name">Deep Navy</div><div class="swatch-hex">#1A1A2E</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#F8F9FA">
+      <div class="swatch-color" style="background:#F8F9FA"></div>
+      <div class="swatch-info"><div class="swatch-name">Clean White</div><div class="swatch-hex">#F8F9FA</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FF69B4">
+      <div class="swatch-color" style="background:#FF69B4"></div>
+      <div class="swatch-info"><div class="swatch-name">Hot Pink</div><div class="swatch-hex">#FF69B4</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#00B4D8">
+      <div class="swatch-color" style="background:#00B4D8"></div>
+      <div class="swatch-info"><div class="swatch-name">Bright Cyan</div><div class="swatch-hex">#00B4D8</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FF9500">
+      <div class="swatch-color" style="background:#FF9500"></div>
+      <div class="swatch-info"><div class="swatch-name">Vivid Amber</div><div class="swatch-hex">#FF9500</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Warm & Inviting</div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FF6B35">
+      <div class="swatch-color" style="background:#FF6B35"></div>
+      <div class="swatch-info"><div class="swatch-name">Sunset Orange</div><div class="swatch-hex">#FF6B35</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FF4757">
+      <div class="swatch-color" style="background:#FF4757"></div>
+      <div class="swatch-info"><div class="swatch-name">Coral Red</div><div class="swatch-hex">#FF4757</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FA8231">
+      <div class="swatch-color" style="background:#FA8231"></div>
+      <div class="swatch-info"><div class="swatch-name">Tangerine</div><div class="swatch-hex">#FA8231</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#E84393">
+      <div class="swatch-color" style="background:#E84393"></div>
+      <div class="swatch-info"><div class="swatch-name">Hot Pink</div><div class="swatch-hex">#E84393</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Cool & Fresh</div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#1DD1A1">
+      <div class="swatch-color" style="background:#1DD1A1"></div>
+      <div class="swatch-info"><div class="swatch-name">Emerald</div><div class="swatch-hex">#1DD1A1</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#00D2D3">
+      <div class="swatch-color" style="background:#00D2D3"></div>
+      <div class="swatch-info"><div class="swatch-name">Teal/Mint</div><div class="swatch-hex">#00D2D3</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#7BED9F">
+      <div class="swatch-color" style="background:#7BED9F"></div>
+      <div class="swatch-info"><div class="swatch-name">Mint Green</div><div class="swatch-hex">#7BED9F</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#6C5CE7">
+      <div class="swatch-color" style="background:#6C5CE7"></div>
+      <div class="swatch-info"><div class="swatch-name">Electric Purple</div><div class="swatch-hex">#6C5CE7</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Bold & Modern</div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FD79A8">
+      <div class="swatch-color" style="background:#FD79A8"></div>
+      <div class="swatch-info"><div class="swatch-name">Pink</div><div class="swatch-hex">#FD79A8</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FDCB6E">
+      <div class="swatch-color" style="background:#FDCB6E"></div>
+      <div class="swatch-info"><div class="swatch-name">Golden Yellow</div><div class="swatch-hex">#FDCB6E</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#74B9FF">
+      <div class="swatch-color" style="background:#74B9FF"></div>
+      <div class="swatch-info"><div class="swatch-name">Sky Blue</div><div class="swatch-hex">#74B9FF</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#A29BFE">
+      <div class="swatch-color" style="background:#A29BFE"></div>
+      <div class="swatch-info"><div class="swatch-name">Lavender</div><div class="swatch-hex">#A29BFE</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">High-Energy</div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FF3838">
+      <div class="swatch-color" style="background:#FF3838"></div>
+      <div class="swatch-info"><div class="swatch-name">Vivid Red</div><div class="swatch-hex">#FF3838</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#00CEC9">
+      <div class="swatch-color" style="background:#00CEC9"></div>
+      <div class="swatch-info"><div class="swatch-name">Aqua</div><div class="swatch-hex">#00CEC9</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#70A1FF">
+      <div class="swatch-color" style="background:#70A1FF"></div>
+      <div class="swatch-info"><div class="swatch-name">Bright Blue</div><div class="swatch-hex">#70A1FF</div></div>
+    </div>
+    <div class="swatch">
+      <input type="checkbox" name="color" value="#FFC312">
+      <div class="swatch-color" style="background:#FFC312"></div>
+      <div class="swatch-info"><div class="swatch-name">Gold</div><div class="swatch-hex">#FFC312</div></div>
+    </div>
+  </div>
+
+  <div class="selected-count">Selected: <span id="count">0</span></div>
+  <div class="actions">
+    <button onclick="copySelected()">Copy Selected</button>
+  </div>
+  <div class="result" id="result"></div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[name="color"]');
+    const countEl = document.getElementById('count');
+    const resultEl = document.getElementById('result');
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        countEl.textContent = document.querySelectorAll('input[name="color"]:checked').length;
+        cb.closest('.swatch').classList.toggle('selected', cb.checked);
+      });
+    });
+
+    function copySelected() {
+      const selected = [...checkboxes].filter(cb => cb.checked).map(cb => cb.value);
+      if (selected.length === 0) {
+        resultEl.style.display = 'block';
+        resultEl.textContent = 'No colors selected — check some boxes first!';
+      } else {
+        resultEl.style.display = 'block';
+        resultEl.textContent = selected.join('\n');
+        navigator.clipboard.writeText(selected.join('\n')).then(() => {
+          resultEl.textContent = 'Copied!\n\n' + selected.join('\n');
+        });
+      }
+    }
+  </script>
+</body>
+</html>

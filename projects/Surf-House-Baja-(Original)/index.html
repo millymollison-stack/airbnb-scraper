@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script>
+(function() {
+  var saved = localStorage.getItem("site-brand-color");
+  if (saved) {
+    try {
+      var c = JSON.parse(saved);
+      document.documentElement.style.setProperty("--brand", c.brand);
+      document.documentElement.style.setProperty("--brand-hover", c.brandHover);
+      document.documentElement.style.setProperty("--brand-disabled", c.brandDisabled);
+    } catch(e) {}
+  }
+  var savedFont = localStorage.getItem("site-font-accent");
+  if (savedFont) {
+    document.documentElement.style.setProperty("--font-accent", "'" + savedFont + "', serif");
+  }
+})();
+</script>
+<style>:root{--brand:#C47756;--brand-hover:#B5684A;--brand-disabled:#D4A393;--font-accent:'Playfair Display',serif}h1,h2{font-family:var(--font-accent,'Playfair Display',serif)!important}</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600;700&family=DM+Serif+Display&family=Fraunces:wght@400;700&family=Space+Grotesk:wght@400;700&family=Josefin+Sans:wght@400;600;700&family=Archivo+Black&family=Abril+Fatface&family=Righteous&family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surf House Baja - Luxury Vacation Rental</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/app/main.tsx"></script>
+  </body>
+</html>

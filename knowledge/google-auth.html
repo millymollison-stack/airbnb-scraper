@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Auth — Milly</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 600px; margin: 60px auto; padding: 20px; background: #111; color: #fff; }
+  h1 { color: #fff; }
+  .box { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 24px; margin: 20px 0; }
+  .label { color: #888; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .url-box { background: #0a0a0a; border: 1px solid #333; border-radius: 6px; padding: 12px; word-break: break-all; font-size: 0.8em; color: #a8dadc; font-family: monospace; }
+  a { color: #4a9eff; }
+  .btn { display: inline-block; background: #4a9eff; color: #fff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1em; margin-top: 12px; }
+  .btn:hover { background: #3a8eef; }
+  .note { background: #2a2000; border: 1px solid #665500; border-radius: 8px; padding: 16px; margin-top: 24px; color: #ffd700; font-size: 0.9em; }
+  input { width: 100%; background: #0a0a0a; border: 1px solid #333; border-radius: 6px; padding: 12px; color: #a8dadc; font-family: monospace; font-size: 0.85em; box-sizing: border-box; }
+  button { background: #2e7d32; color: #fff; border: none; padding: 12px 24px; border-radius: 6px; font-size: 1em; cursor: pointer; margin-top: 12px; }
+  button:hover { background: #1b5e20; }
+  .result { margin-top: 20px; padding: 16px; border-radius: 8px; display: none; }
+  .result.success { background: #1b3a1b; border: 1px solid #2e7d32; color: #4caf50; }
+  .result.error { background: #3a1b1b; border: 1px solid #7d32; color: #f44336; }
+</style>
+</head>
+<body>
+
+<h1>🔐 Google Auth for Milly</h1>
+
+<div class="box">
+  <div class="label">Step 1 — Click this link to sign in with Google</div>
+  <div class="url-box">
+    <a href="https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=356073951160-2cfqbabe76h7ii4jeko8himk24j389hb.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=http%3A%2F%2F127.0.0.1%3A58444%2Foauth2%2Fcallback&response_type=code&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdocuments+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&state=OR_wRYa-pR8SQam4R1jmnZHe5F9tpFH7PidwA_RmcTM">
+      Click here to authorize with Google
+    </a>
+  </div>
+  <a class="btn" href="https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=356073951160-2cfqbabe76h7ii4jeko8himk24j389hb.apps.googleusercontent.com&include_granted_scopes=true&redirect_uri=http%3A%2F%2F127.0.0.1%3A58444%2Foauth2%2Fcallback&response_type=code&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdocuments+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&state=OR_wRYa-pR8SQam4R1jmnZHe5F9tpFH7PidwA_RmcTM">
+    🔵 Sign in with Google
+  </a>
+</div>
+
+<div class="box">
+  <div class="label">Step 2 — Paste the redirect URL here</div>
+  <p style="color: #888; font-size: 0.85em; margin-bottom: 12px;">
+    After you click "Sign in with Google" and approve access, the page will show an error 
+    (that's normal — nothing is listening on localhost). <strong>Copy the full URL from your 
+    browser's address bar</strong> and paste it below:
+  </p>
+  <input type="text" id="redirectUrl" placeholder="Paste the redirect URL here...">
+  <button onclick="extractCode()">Extract Code →</button>
+  <div id="result" class="result"></div>
+</div>
+
+<div class="note">
+  <strong>💡 What to do:</strong><br>
+  1. Click "Sign in with Google" above<br>
+  2. Sign in to millymollison@gmail.com and click "Allow"<br>
+  3. The page will say "无法连接" or "This page can't be reached"<br>
+  4. <strong>Copy the entire URL</strong> from your browser's address bar<br>
+  5. Paste it into the box above and click "Extract Code"
+</div>
+
+<script>
+function extractCode() {
+  const input = document.getElementById('redirectUrl').value.trim();
+  const result = document.getElementById('result');
+  
+  if (!input) {
+    result.className = 'result error';
+    result.style.display = 'block';
+    result.innerHTML = 'Please paste the redirect URL first.';
+    return;
+  }
+  
+  try {
+    const url = new URL(input);
+    const code = url.searchParams.get('code');
+    const state = url.searchParams.get('state');
+    
+    if (!code) {
+      result.className = 'result error';
+      result.style.display = 'block';
+      result.innerHTML = 'No "code" parameter found in the URL. Make sure you copied the entire URL from your browser.';
+      return;
+    }
+    
+    result.className = 'result success';
+    result.style.display = 'block';
+    result.innerHTML = `
+      <strong>✅ Success!</strong><br><br>
+      <strong>State:</strong> <code>${state}</code><br>
+      <strong>Code:</strong> <code>${code.substring(0, 40)}...</code><br><br>
+      Copy the full code below and send it to Milly:<br><br>
+      <input type="text" value="${code}" style="width:100%;background:#0a0a0a;border:1px solid #333;border-radius:4px;padding:8px;color:#4caf50;font-family:monospace;" onclick="this.select()" readonly>
+    `;
+  } catch (e) {
+    result.className = 'result error';
+    result.style.display = 'block';
+    result.innerHTML = 'Invalid URL format. Please paste the exact URL from your browser address bar.';
+  }
+}
+</script>
+
+</body>
+</html>

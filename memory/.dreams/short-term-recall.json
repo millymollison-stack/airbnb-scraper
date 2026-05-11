@@ -1,0 +1,448 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-10T11:14:49.725Z",
+  "entries": {
+    "memory:memory/archive/2026-04-08.md:1:39": {
+      "key": "memory:memory/archive/2026-04-08.md:1:39",
+      "path": "memory/archive/2026-04-08.md",
+      "startLine": 1,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "# Daily Notes - April 8, 2026 ## Nightly Knowledge Review ### Project Status Summary **Surfhousebaja Project:** - Status: COMPLETED ✅ - Last active: March 2026 - Key deliverable: Airbnb Import System - allows users to paste an Airbnb URL and generate a property site - Tech: Node.js server + Python Selenium scraper + HTML template - GitHub: https://github.com/davidsassistant/surfhousebaja-template - Note: Keep as template reference, not actively developed **Vacation Rental SaaS (\"Get Your Own Site\"):** - Status: ACTIVE 🚀 - Current focus: P9 onboarding + Supabase user auth + site generation - Last updated: March 26, 2026 - Features working: Signup, sign-in, user_sites created, placeholder",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-27T13:09:33.135Z",
+      "lastRecalledAt": "2026-04-27T17:53:02.919Z",
+      "queryHashes": [
+        "72804b878a67",
+        "1e4e2cc3ff68"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "node.js",
+        "sign-in",
+        "user-sites",
+        "april",
+        "nightly",
+        "knowledge",
+        "review",
+        "project"
+      ]
+    },
+    "memory:memory/archive/2026-04-19.md:1:38": {
+      "key": "memory:memory/archive/2026-04-19.md:1:38",
+      "path": "memory/archive/2026-04-19.md",
+      "startLine": 1,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "# 2026-04-19 ## Session start: 9:00 AM UTC (6:00 AM São Paulo) ## Server status | Port | Site | Status | Notes | |------|------|--------|-------| | 5174 | React template dev | ✅ | | | 5175 | Surf House Baja clean | ✅ | | | 6905 | Airbnb scraper | ✅ | BLOCKER CLEARED (working as of Apr 18) | | 3099 | Stripe server | ✅ | Running since Apr 18 | | 9100 | NewAdminSite | ✅ | | | 9103 | Original live site | ✅ | | | 9000 | Landing page | ✅ | | ## Key update from Apr 18: Scraper Blocker CLEARED - Airbnb scraper returned to working status Apr 18 afternoon - Stripe server (port 3099) confirmed running - Payment modal working with setup intent for $0 plans - Email validation added before opening paym",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-27T13:09:33.135Z",
+      "lastRecalledAt": "2026-04-27T17:53:02.919Z",
+      "queryHashes": [
+        "72804b878a67",
+        "1e4e2cc3ff68"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "start",
+        "utc",
+        "são",
+        "paulo",
+        "server",
+        "status",
+        "site",
+        "react"
+      ]
+    },
+    "memory:memory/archive/2026-03-26.md:1:43": {
+      "key": "memory:memory/archive/2026-03-26.md:1:43",
+      "path": "memory/archive/2026-03-26.md",
+      "startLine": 1,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "# March 26, 2026 - Full Project Session ## Get Your Own Site - MVP Complete! 🦾 ### What We Built A full SaaS platform for vacation rental hosts to create their own booking websites with Airbnb import. ### Key Achievements 1. **Landing Page** - Supabase auth, P9 onboarding form 2. **User Site Creation** - Auto-creates site in database on signup 3. **Airbnb Scraper** - Python/Selenium scrapes: title, price, location, hero image 4. **Database Integration** - Data saved to properties & property_images tables 5. **Template Display** - Scraped data populates Surf House Baja template ### Files Built - `vacation-rental-deploy/index.html` - Landing page - `vacation-rental-deploy/js/supabase.js",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-27T17:53:02.919Z",
+      "lastRecalledAt": "2026-04-27T17:53:02.919Z",
+      "queryHashes": [
+        "1e4e2cc3ff68"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "auto-creates",
+        "python/selenium",
+        "property-images",
+        "march",
+        "full",
+        "project",
+        "get",
+        "own"
+      ]
+    },
+    "memory:memory/2026-04-25.md:1:13": {
+      "key": "memory:memory/2026-04-25.md:1:13",
+      "path": "memory/2026-04-25.md",
+      "startLine": 1,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "### Afternoon session (13:00-13:46) - Reverted tailwind preflight disable (it broke too many things) - Scoped h1 base rule to `.sidebar-panel h1` in sidebar.css (no longer leaks to main site) - Added bare h1 rule to index.css with white color for hero titles - Made `.hero-title` and `.hero-title-price` use `!important` on all props in index.css so they always beat Tailwind preflight - Removed Cancel button from UserMenu sidebar header actions - Reordered: Edit/Save on left, X on right - Made all sidebar header buttons (Edit, Save, X) use `val-color` (var(--brand)) - Fixed popup-textarea.editmode in Editmode.css + OnboardingPopup.css: set to 80% + border-radius 6px, removed 100% - Added sing",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-01T04:12:53.300Z",
+      "lastRecalledAt": "2026-05-10T11:14:49.725Z",
+      "queryHashes": [
+        "aa6b2094cb19",
+        "292105dd745c"
+      ],
+      "recallDays": [
+        "2026-05-01",
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "00-13",
+        "sidebar-panel",
+        "sidebar.css",
+        "index.css",
+        "hero-title",
+        "hero-title-price",
+        "edit/save",
+        "val-color"
+      ]
+    },
+    "memory:memory/archive/2026-04-24.md:1:42": {
+      "key": "memory:memory/archive/2026-04-24.md:1:42",
+      "path": "memory/archive/2026-04-24.md",
+      "startLine": 1,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "# 2026-04-24 ## Status: CSS audit caused layout breakage — reverted ### What happened - Asked to audit/clean all CSS files - Rewrote `styles.css` and `index.css` (removed global selectors, reorganized) - Layout broke on live site — completely destroyed - **Reverted** by restoring original files from GitHub (`git show HEAD~1:...`) - Only made minimal surgical changes after: removed 8 dead lines from `index.css` - Rewrote `index.css` with clear section headers (24 sections, 743 lines) — no rule changes - `styles.css` remains untouched (original) ### Today's changes - `src/app/index.css`: reorganized into 24 clear sections with headers - `src/components/styles.css`: untouched (left as-is) -",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-01T04:12:53.300Z",
+      "lastRecalledAt": "2026-05-01T04:12:53.300Z",
+      "queryHashes": [
+        "aa6b2094cb19"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "audit/clean",
+        "styles.css",
+        "index.css",
+        "src/app/index.css",
+        "src/components/styles.css",
+        "as-is",
+        "status",
+        "css"
+      ]
+    },
+    "memory:memory/archive/2026-04-06.md:33:76": {
+      "key": "memory:memory/archive/2026-04-06.md:33:76",
+      "path": "memory/archive/2026-04-06.md",
+      "startLine": 33,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "- Clicks \"Import from Airbnb\" or \"Test Import\" - Scrapes real data from Airbnb using Selenium - Saves to Supabase (user_sites + property_images tables) - Updates the hero image on the page **How to test:** 1. Go to http://localhost:9100 2. Setup modal appears automatically 3. Click \"Airbnb profile import\" radio button 4. Enter URL or click \"Test Import\" 5. Watch the spinner → see success preview ### Key Files ``` ~/.openclaw/workspace/projects/ ├── vacation-rental-deploy/ │ ├── index.html # Landing page (port 9000) │ ├── js/main.js # Landing page logic │ └── sites/ │ └── avidmollison1newsiteadmin2gmailcom/ │ └── index",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-01T04:12:53.300Z",
+      "lastRecalledAt": "2026-05-01T04:26:04.892Z",
+      "queryHashes": [
+        "aa6b2094cb19",
+        "1a9b8607c19d",
+        "f6914d13904e"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "user-sites",
+        "property-images",
+        "openclaw/workspace/projects",
+        "vacation-rental-deploy",
+        "index.html",
+        "js/main.js",
+        "clicks",
+        "import"
+      ]
+    },
+    "memory:memory/archive/2026-04-06.md:1:41": {
+      "key": "memory:memory/archive/2026-04-06.md:1:41",
+      "path": "memory/archive/2026-04-06.md",
+      "startLine": 1,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "# Daily Notes - April 6, 2026 ## 🏠 Vacation Rental SaaS - Project Status ### Active Local Servers | Site | URL | File Path | |------|-----|-----------| | Get Your Own Site (landing) | http://localhost:9000 | `projects/vacation-rental-deploy/index.html` | | User Site (NewAdmin) | http://localhost:9100 | `projects/vacation-rental-deploy/sites/avidmollison1newsiteadmin2gmailcom/index.html` | | Airbnb Scrape API | http://localhost:6900 | `projects/vacation-rental-deploy/sites/davidmollison1newsiteadmingmailcom/template/Airbnb Import Template/api_server.py` | | Test Page | http://localhost:6900/test | (same as above) | ### How to Start All Servers Run these commands in order: ```bash # 1.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-01T04:12:53.300Z",
+      "lastRecalledAt": "2026-05-01T04:12:53.300Z",
+      "queryHashes": [
+        "aa6b2094cb19"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "template/api-server.py",
+        "6900/test",
+        "april",
+        "vacation",
+        "rental",
+        "saas",
+        "project",
+        "status"
+      ]
+    },
+    "memory:memory/archive/2026-04-13.md:84:118": {
+      "key": "memory:memory/archive/2026-04-13.md:84:118",
+      "path": "memory/archive/2026-04-13.md",
+      "startLine": 84,
+      "endLine": 118,
+      "source": "memory",
+      "snippet": "- 9103: Original live site ❌ not running - 9000: vacation-rental-deploy landing page ❌ not running ### CSS: - styles.css rebuilt clean from base CSS (749eb2d) + clean popup styles - Committed as 9efe9f4: \"CSS: rebuild styles.css clean\" - Braces: 111/111 ✅ - popup-backdrop: position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.6) - All inputs unified: width:80%, rgba(255,255,255,0.1) background, 6px radius ### David instruction: - NO commits unless he says — milestone-based commits only ### Active project status: - CSS: ✅ done - onboarding_data table: ❌ BLOCKED (needs dashboard or CLI) - Bucket policy: ❌ done (bucket is public) - Publish flow: untested --- ## Afternoon session updat",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-01T04:12:53.300Z",
+      "lastRecalledAt": "2026-05-01T04:12:53.300Z",
+      "queryHashes": [
+        "aa6b2094cb19"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "vacation-rental-deploy",
+        "styles.css",
+        "111/111",
+        "popup-backdrop",
+        "z-index",
+        "0.6",
+        "0.1",
+        "milestone-based"
+      ]
+    },
+    "memory:memory/archive/2026-04-08.md:1:43": {
+      "key": "memory:memory/archive/2026-04-08.md:1:43",
+      "path": "memory/archive/2026-04-08.md",
+      "startLine": 1,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "# April 8, 2026 - Daily Notes ## Startup Instructions (How to Resume Work) ### 1. Start the Servers ```bash # Terminal 1 - Template server (port 9102) cd ~/.openclaw/workspace/projects/02-surfhousebaja-template/src/dist && python3 -m http.server 9102 # Terminal 2 - Template server (port 9103 backup) cd ~/.openclaw/workspace/projects/02-surfhousebaja-template/Surf\\ House\\ Baja\\ \\(Original\\)/dist && python3 -m http.server 9103 # Terminal 3 - AirBnB scraper (port 6900) cd ~/.openclaw/workspace/projects/vacation-rental-deploy/sites/avidmollison1newsiteadmin2gmailcom && python3 scraper.py ``` ### 2. Access Points - **Template:** http://localhost:9102/ - **Onboarding overlay:** http://localho",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-01T04:25:38.558Z",
+      "lastRecalledAt": "2026-05-01T04:26:04.892Z",
+      "queryHashes": [
+        "1a9b8607c19d",
+        "f6914d13904e"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "backup",
+        "http.server",
+        "scraper.py",
+        "april",
+        "startup",
+        "instructions",
+        "how",
+        "resume"
+      ]
+    },
+    "memory:memory/archive/2026-04-09.md:36:51": {
+      "key": "memory:memory/archive/2026-04-09.md:36:51",
+      "path": "memory/archive/2026-04-09.md",
+      "startLine": 36,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "- Moved to archive on April 8, 2026 - Served as foundation for current SaaS project - Tech: Node.js + Python Selenium + HTML template ### Action Items (from April 8) - [x] Onboarding overlay created - [ ] Fix scraper to get real Airbnb data (use playwright OR browser automation) ## Today's Plan 1. Continue fixing the Airbnb scraper 2. Try browser-based scraping via OpenClaw 3. Test with real Airbnb URL --- Yesterday: April 8, 2026",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-01T04:25:38.558Z",
+      "lastRecalledAt": "2026-05-01T04:26:04.892Z",
+      "queryHashes": [
+        "1a9b8607c19d",
+        "f6914d13904e"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "node.js",
+        "browser-based",
+        "moved",
+        "archive",
+        "april",
+        "served",
+        "foundation",
+        "current"
+      ]
+    },
+    "memory:memory/archive/2026-04-25.md:1:25": {
+      "key": "memory:memory/archive/2026-04-25.md:1:25",
+      "path": "memory/archive/2026-04-25.md",
+      "startLine": 1,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "--- ## Mid-morning Session (11:34-11:39) ### Servers restarted - 5174 went down twice — restored each time (serve process dying) - 3099 (stripe-server) also drifted — restarted ### sidebar.css additions - `.whitespace-pre-line { padding: 0 !important; }` added to ImageGallery.css - `.hero-title-price` fixed in index.css — added font-size clamp, font-weight:400, uppercase to match .hero-title - New base `h1` rule added to sidebar.css — all h1s now use color picker's --font-accent, black 73% opacity: `color: rgba(0, 0, 0, 0.73); font-size: clamp(1.25rem, 3vw, 1.75rem);` ### h1 Font Fix (ongoing) - All h1s now use `font-family: var(--font-accent)` from color picker, weight 400, clamp(1.2",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T11:14:49.725Z",
+      "lastRecalledAt": "2026-05-10T11:14:49.725Z",
+      "queryHashes": [
+        "292105dd745c"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "mid-morning",
+        "34-11",
+        "stripe-server",
+        "sidebar.css",
+        "whitespace-pre-line",
+        "imagegallery.css",
+        "hero-title-price",
+        "index.css"
+      ]
+    },
+    "memory:memory/2026-04-27.md:17:36": {
+      "key": "memory:memory/2026-04-27.md:17:36",
+      "path": "memory/2026-04-27.md",
+      "startLine": 17,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "5. **Day picker lozenge CSS (REVERTED)** — Tried to add CSS to make date ranges look like a continuous lozenge on large screens by rounding only outer edges of start/end days. Made calendar numbers invisible. Reverted at 1:18am — removed all `.rdp-day_*` CSS. Calendar back to default. 6. **Fixed TypeScript error** — Orphan `{user.role === 'admin' && (}` left over from button removal → caused parse error at line 569. Fixed. ### Key Files Changed - `src/components/UserMenu.tsx` — sidebar UX, removed admin buttons - `src/components/OnboardingPopup.tsx` — removed debug overlay - `src/components/sidebar.css` — removed sidebar-actions CSS - `src/index.css` — booking-modal-textarea styles - GitHu",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T11:14:49.725Z",
+      "lastRecalledAt": "2026-05-10T11:14:49.725Z",
+      "queryHashes": [
+        "292105dd745c"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "start/end",
+        "rdp-day",
+        "user.role",
+        "src/components/usermenu.tsx",
+        "src/components/sidebar.css",
+        "sidebar-actions",
+        "src/index.css",
+        "booking-modal-textarea"
+      ]
+    },
+    "memory:memory/2026-04-27.md:1:22": {
+      "key": "memory:memory/2026-04-27.md:1:22",
+      "path": "memory/2026-04-27.md",
+      "startLine": 1,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "# Daily Note — 2026-04-27 ## Session Summary Good productive session. All work on the Surf House Baja template (02-surfhousebaja-template). ### Done Today 1. **Spinner replacement** — Replaced sidebar's old `.sidebar-spinner` with `spinner-ring` class. Also updated `spinner-ring` border from `#f3f4f6` to `#d1d5db` for visibility on white backgrounds. Also replaced Home page Tailwind `animate-spin` spinner. 2. **Removed debug overlay** — Deleted `showDebug` state, `useEffect` D-key handler, debug data panel JSX, and all `.debug-data-*` CSS from OnboardingPopup. 3. **Booking modal textarea** — Added `.booking-modal-textarea` CSS to `index.css` with `width: 80%`, `display: block`, `box-si",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T11:14:49.725Z",
+      "lastRecalledAt": "2026-05-10T11:14:49.725Z",
+      "queryHashes": [
+        "292105dd745c"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "02-surfhousebaja-template",
+        "sidebar-spinner",
+        "spinner-ring",
+        "animate-spin",
+        "d-key",
+        "debug-data",
+        "booking-modal-textarea",
+        "index.css"
+      ]
+    },
+    "memory:memory/archive/2026-04-19.md:1:26": {
+      "key": "memory:memory/archive/2026-04-19.md:1:26",
+      "path": "memory/archive/2026-04-19.md",
+      "startLine": 1,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "## Memory Maintenance 2026-04-19 06:39 AM ### Yesterday's (Apr 18) Key Decisions: - PaymentComplete flag added - handlePublish opens gateway if not paid, skips if paid - Autosave hooks REMOVED - David doesn't want Supabase writes until payment+publish (cost concern) - Supabase save only fires: (1) CheckoutForm onSuccess, (2) handlePublish success path - Architecture confirmed: ONE shared React codebase, URL path = customer identifier - Customer sites: mollisondavid.com/{slug}/ (subdomain/folder approach confirmed) - Stripe Connect needed for payout flow: guest pays → Stripe cut → platform fee → owner net balance - Owner sidebar: App Details, Bookings, Balance (NET only), Withdraw, Branding",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-10T11:14:49.725Z",
+      "lastRecalledAt": "2026-05-10T11:14:49.725Z",
+      "queryHashes": [
+        "292105dd745c"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "gateway",
+        "mollisondavid.com",
+        "subdomain/folder",
+        "maintenance",
+        "yesterday's",
+        "apr",
+        "key",
+        "decisions"
+      ]
+    }
+  }
+}

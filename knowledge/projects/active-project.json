@@ -1,0 +1,62 @@
+{
+  "name": "Vacation Rental SaaS",
+  "description": "Onboarding popup + Airbnb import \u2192 real page slider (ImageGallery)",
+  "status": "in-progress",
+  "started": "2026-04-10",
+  "updated": "2026-04-25",
+  "priority_order": [
+    "1. New Site Template - Clean UI (fix Editmode.css, get edit inputs styled and functional)",
+    "2. New Site Template - Color picker (make sure it works cleanly)",
+    "3. New Site Template - Popup fields (email, banking, server URL, details \u2192 wired to Supabase)",
+    "4. Stripe payment",
+    "5. Site duplication function",
+    "6. Get Your Own Site - clean up",
+    "7. Build Airbnb host list",
+    "8. Video + ads"
+  ],
+  "keyFiles": {
+    "onboardingPopup": "02-surfhousebaja-template/src/components/OnboardingPopup.tsx",
+    "templatePreview": "02-surfhousebaja-template/src/components/TemplatePreview.tsx",
+    "homePage": "02-surfhousebaja-template/src/pages/Home.tsx",
+    "imageGallery": "02-surfhousebaja-template/src/components/ImageGallery.tsx",
+    "scraper": "airbnb-scraper/server.js",
+    "colorPicker": "02-surfhousebaja-template/src/components/ColorPicker.tsx",
+    "brandColor": "02-surfhousebaja-template/src/lib/brandColor.ts",
+    "fontAccent": "02-surfhousebaja-template/src/lib/fontAccent.ts"
+  },
+  "servers": {
+    "reactDev": "localhost:5174",
+    "scraper": "localhost:6905",
+    "stripeServer": "localhost:3099",
+    "newAdminSite": "localhost:9100",
+    "liveSite": "localhost:9103",
+    "landingPage": "localhost:9000"
+  },
+  "critical_blockers": [],
+  "done": [
+    "OnboardingPopup.tsx fully built (4-step wizard with manual upload, live preview, color picker)",
+    "TemplatePreview.tsx (inline-styled preview, hero 700px container)",
+    "Airbnb import wiring to scraper 6905",
+    "Countdown timer during import",
+    "Backdrop opacity fixed (10%)",
+    "Step headings with <hr> lines",
+    "handleImportedImages() \u2014 uploads to Supabase storage",
+    "Color Switcher: CSS vars in index.html head, localStorage persistence, ColorPicker.tsx (edit-mode), brandColor.ts utility, ~90 var() replacements",
+    "Manual image upload: capture=environment, thumbnail grid, hero selection, \u00d7 to remove, live TemplatePreview updates",
+    "Font selector: 14 fonts (Playfair Display, Libre Baskerville, Oswald, Sintony, Raleway, Nixie One, Oleo Script, Unbounded, Urbanist, Barrio, Advent Pro, DM Serif Display, Fraunces, Archivo Black)",
+    "Stripe payment modal: Card/PayPal/Venmo icons, 400px compact, setup intent for $0 plans",
+    "OnboardingPopup placeholder text: rgba(0,0,0,0.7) !important",
+    "FontDropdown: 400px width, 16px font size, arrow right-aligned",
+    "GitHub push c55dc9f"
+  ],
+  "next": [
+    "1. Editmode.css - fix edit inputs styled and functional",
+    "2. Color picker - verify clean working in edit mode",
+    "3. Popup fields - wire email, banking, server URL, details to Supabase",
+    "4. Stripe payment - wire full subscription/save-card flow",
+    "5. Site duplication function",
+    "6. Get Your Own Site - clean up",
+    "7. Build Airbnb host list",
+    "8. Video + ads"
+  ]
+}
